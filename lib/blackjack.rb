@@ -1,3 +1,4 @@
+require 'pry'
 def welcome
   puts "Welcome to the Blackjack Table"
 end
@@ -23,9 +24,14 @@ def end_game(card_total)
 end
 
 def initial_round
+<<<<<<< HEAD
   num = deal_card + deal_card
   display_card_total(num)
   num
+=======
+  display_card_total(deal_card + deal_card)
+  deal_card + deal_card
+>>>>>>> 35a17f80aae8e483caeb594c61f286f2e5c9b91f
 end
 
 def hit?(num)
@@ -51,6 +57,7 @@ end
 
 def runner
   welcome
+<<<<<<< HEAD
   counter = hit?(initial_round)
   until counter > 21
   display_card_total(counter)
@@ -61,3 +68,11 @@ def runner
 end
 
 
+=======
+  num = initial_round
+  count = 0
+  until count < 21
+  count = hit?(num)
+  end
+end
+>>>>>>> 35a17f80aae8e483caeb594c61f286f2e5c9b91f
